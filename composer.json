@@ -1,0 +1,11 @@
+{
+    "require": {
+        "symfony/console": "2.6.7",
+        "fzaninotto/faker": "^1.6"
+    },
+    "autoload": {
+        "classmap": [
+            ["Commands"]
+        ]
+    }
+}

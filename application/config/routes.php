@@ -1,0 +1,46 @@
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+
+    $route['default_controller'] = 'home';
+    $route['404_override'] = '';
+    $route['admin'] = 'admin/admin';
+    $route['([a-z]{2})/hotels/(:any)'] = 'hotels/index/$2';
+    $route['([a-z]{2})/property/(:any)/(:any)'] = 'property/index';
+    $route['([a-z]{2})/plan_your_tip/BookNow'] = 'plan_your_tip/BookNow';
+    $route['([a-z]{2})/programs/getProgramFlightInfo'] = 'programs/getProgramFlightInfo';
+    $route['([a-z]{2})/programs/getProgramExtraServicesPerson'] = 'programs/getProgramExtraServicesPerson';
+    $route['([a-z]{2})/programs/addPaymentDataToReservation'] = 'programs/addPaymentDataToReservation';
+    $route['([a-z]{2})/destinations/(:any)'] = 'destinations/index';
+    $route['([a-z]{2})/booking/(:num)/(:num)'] = 'programs/booking/$2/$3';
+    $route['([a-z]{2})/programs/print_report'] = 'programs/print_report';
+    $route['([a-z]{2})/programs/BookNow'] = 'programs/BookNow';
+    $route['([a-z]{2})/programs/(:any)'] = 'programs/index/$2';
+    $route['([a-z]{2})/programs/(:any)/page-(:any)'] = 'programs/index/$2/$3';
+    $route['([a-z]{2})/sightseeing/(:any)'] = 'sightseeing/index/$2';
+    $route['([a-z]{2})/sightseeing/(:any)/(:any)'] = 'sightseeing/details/$2';
+    $route['([a-z]{2})/search/save_query'] = 'search/save_query';
+    $route['([a-z]{2})/search/q-(:any)'] = 'search/index';
+    $route['([a-z]{2})/search/q-(:any)/page-(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/(:any)/(:any)/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/(:any)/(:any)/(:any)/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/programs/print_reservation'] = 'programs/print_reservation';
+//    $route['([a-z]{2})/programs/BookNow'] = 'programs/BookNow';
+//    $route['([a-z]{2})/programs/getProgramsFlightExtraServicesPerson'] = 'programs/getProgramsFlightExtraServicesPerson';
+//    $route['([a-z]{2})/programs/getCitiesLike'] = 'programs/getCitiesLike';
+//    $route['([a-z]{2})/programs/getHotelsLike'] = 'programs/getHotelsLike';
+//    $route['([a-z]{2})/property/(:any)/(:any)/(:any)'] = 'property/index';
+//    $route['([a-z]{2})/destinations/(:any)'] = 'destinations/cities';
+//    $route['([a-z]{2})/destinations/(:any)/(:any)'] = 'destinations/city/$1/$2';
+//    $route['([a-z]{2})/destinations/moreHotels'] = 'destinations/moreHotels';
+//    $route['test'] = 'destinations/test';
+//    $route['([a-z]{2})/shrines/(:any)'] = 'shrines/index';
+//    $route['([a-z]{2})/search/programs/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/programs/(:any)/page-(:any)'] = 'search/index';
+//    $route['([a-z]{2})/search/hotels/(:any)'] = 'search/index';
+//    $route['([a-z]{2})/hotels/booking/(:any)/(:any)/(:any)'] = 'hotels/booking';
+
+    $route['^([a-z]{2})$'] = $route['default_controller'];
+    $route['^([a-z]{2})/(.*)$'] = "$2";
+    //$route['404_override'] = 'pages';
